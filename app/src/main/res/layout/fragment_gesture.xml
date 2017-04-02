@@ -1,0 +1,235 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.citrus.ckm.com.ckm.CKM">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Switch
+                    android:text="APPLY ON BOOT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/apply_on_boot_gesture_switch"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:textStyle="normal|bold"
+                    android:textSize="12sp"
+                    android:theme="@style/ApplyOnBoot" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:id="@+id/dt2w_card"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Switch
+                    android:text="Double Tap To Wake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dt2w_switch"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:text="Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dt2w_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:id="@+id/s2w_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Sweep to wake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s2w"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:text="Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s2w_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:id="@+id/s2s_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Sweep to sleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s2s"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp" />
+
+                <TextView
+                    android:text="Disabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/s2s_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAlignment="viewEnd"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/vibe_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Wake Gesture Vibration Strength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vibe"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp" />
+
+                <TextView
+                    android:text="xxx%"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vibe_percentage_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:paddingTop="45dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vibe_bar"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="45dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="60dp"
+                    android:max="90" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

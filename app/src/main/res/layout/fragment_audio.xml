@@ -1,0 +1,375 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.citrus.ckm.com.ckm.CKM"
+        android:weightSum="1">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardElevation="2dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Switch
+                android:text="APPLY ON BOOT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/apply_on_boot_audio_switch"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textAllCaps="false"
+                android:textStyle="normal|bold"
+                android:textSize="12sp"
+                android:theme="@style/ApplyOnBoot" />
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/mic_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Mic gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mic"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp" />
+
+                <TextView
+                    android:text="xxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mic_value_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:paddingTop="45dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mic_bar"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="45dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="60dp"
+                    android:max="30"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/speaker_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Speaker gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speaker"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp" />
+
+                <TextView
+                    android:text="xxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speaker_value_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:paddingTop="45dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speaker_bar"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="45dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="60dp"
+                    android:max="30"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/analog_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Headphone Analog Gain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/analog"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:layout_marginBottom="10dp" />
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:text="Left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_a_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_a_value_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_a_bar"
+                        android:paddingStart="60dp"
+                        android:paddingEnd="60dp"
+                        android:max="19" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp">
+
+                    <TextView
+                        android:text="Right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/right_a_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rigth_a_value_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/right_a_bar"
+                        android:paddingStart="60dp"
+                        android:paddingEnd="60dp"
+                        android:max="19" />
+
+                </RelativeLayout>
+
+                <Switch
+                    android:text="Link Right and Left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/link_a_switch"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/digital_card"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:text="Headphone Digital Gain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/digital"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp" />
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:text="Left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_d_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_d_value_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textSize="12sp"
+                        android:textAlignment="viewEnd" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_d_bar"
+                        android:paddingStart="60dp"
+                        android:paddingEnd="60dp"
+                        android:max="20" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:text="Right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/right_d_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rigth_d_value_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/right_d_bar"
+                        android:paddingStart="60dp"
+                        android:paddingEnd="60dp"
+                        android:max="20" />
+
+                </RelativeLayout>
+
+                <Switch
+                    android:text="Link Right and Left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/link_d_switch"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

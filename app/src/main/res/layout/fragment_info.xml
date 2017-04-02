@@ -1,0 +1,539 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.citrus.ckm.com.ckm.CKM"
+        android:weightSum="1">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardElevation="2dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+
+                <TextView
+                    android:text="Kernel Version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Kernel_version"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kernel_text"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:id="@+id/cpu_card"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Current CPU Frequencies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/CPU"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:paddingBottom="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu0_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu0"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu0_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu1_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu1"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu1_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu2_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu2"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu2_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:textAlignment="viewEnd"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu3_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu3"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu3_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu4_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu4"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu4_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu5_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu5"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu5_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu6_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu6"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu6_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:textAlignment="viewEnd"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu7_bar"
+                        android:paddingEnd="60dp"
+                        android:paddingStart="60dp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="CPU 7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu7"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:text="xxxxMHz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cpu7_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textAlignment="viewEnd"
+                        android:textSize="12sp"
+                        android:padding="5dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:id="@+id/gpu_card"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="Current GPU Frequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/GPU"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <TextView
+                    android:text="xxxxMHz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gpu_current_text"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:id="@+id/temp_card"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="false"
+            android:measureAllChildren="false"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Current Temperatures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:id="@+id/temp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp" />
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp">
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/temp_list_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/temp_list_current_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:textAlignment="viewEnd" />
+
+                </RelativeLayout>
+                
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:id="@+id/ram_card"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="2dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:text="Current RAM Usage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/RAM"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:paddingBottom="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mem_info_value_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:text="xxx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mem_info_list_text"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textSize="12sp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
